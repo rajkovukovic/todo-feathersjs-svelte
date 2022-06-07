@@ -19,13 +19,17 @@ const mongoose = require('./mongoose');
 
 const app = express(feathers())
 
+var corsOptions = {
+  origin: '*',
+};
+
 // Load app configuration
 app.configure(configuration())
 // Enable security, CORS, compression, favicon and body parsing
 app.use(helmet({
   contentSecurityPolicy: false
 }))
-app.use(cors())
+app.use(cors(corsOptions))
 app.use(compress())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
