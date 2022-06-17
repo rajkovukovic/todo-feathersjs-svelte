@@ -8,6 +8,8 @@ This project uses [Feathers](http://feathersjs.com). An open source web framewor
 
 ## Getting Started
 
+1. (Optional) In VSCode install ms-vscode-remote.remote-containers version 0.231.1 to have web server accessible via local network, otherwise server will be accessible only on the host machine (via http://localhost:3030)
+
 ### Backend
 
 dev: go to backend folder and run `npm run dev`
